@@ -11,12 +11,23 @@ is very simple for now, it checks the file name ends with a format like `.$FT.tm
 
 ```lua
 -- lazy.nvim --
-{
-  "ngynkvn/gotmpl.nvim"
-  opts = {}
-}
+{ "ngynkvn/gotmpl.nvim", opts = {}}
 ```
 
-# References
+## Usage
 
-[1]: https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#injections
+Once installed, Treesitter will automatically highlight Go template files. Simply open a .tmpl file,
+and you should see improved syntax highlighting. If your file type isn’t detected correctly, you can
+manually set it:
+
+```vim
+:set filetype=gotmpl
+```
+
+### References
+
+- [Injections for nvim-treesitter][1]
+
+[1]:
+  https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#injections
+  "Injections"
