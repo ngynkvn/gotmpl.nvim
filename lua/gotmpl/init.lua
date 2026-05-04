@@ -14,6 +14,12 @@ M.setup = function()
 			tmpl = "gotmpl",
 		},
 	})
+  vim.api.nvim_create_autocmd("FileType", {
+		pattern = "gotmpl",
+		callback = function()
+			vim.treesitter.start()
+		end,
+	})
 end
 
 return M
