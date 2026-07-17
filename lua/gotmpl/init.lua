@@ -17,6 +17,13 @@ M.setup = function()
 		},
 	})
 
+	vim.api.nvim_create_autocmd("FileType", {
+		pattern = "gotmpl",
+		callback = function()
+			vim.treesitter.start()
+		end,
+	})
+
 	-- Moved query inline
 	vim.treesitter.query.set(
 		"gotmpl",
