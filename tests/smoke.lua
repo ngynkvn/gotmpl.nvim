@@ -22,7 +22,11 @@ local function check(desc, got, want)
 end
 
 -- `tmpl` extension itself is registered as the `gotmpl` filetype.
-check("tmpl extension registers as gotmpl", vim.filetype.match({ filename = "plain.tmpl" }), "gotmpl")
+check(
+	"tmpl extension registers as gotmpl",
+	vim.filetype.match({ filename = "plain.tmpl" }),
+	"gotmpl"
+)
 
 -- Host-language detection for `*.$FT.tmpl` buffers, exercised via the
 -- directive's underlying helper (avoids needing a compiled treesitter parser
