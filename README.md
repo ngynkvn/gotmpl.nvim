@@ -10,6 +10,12 @@ This plugin adds treesitter support to separate go template syntax from the host
 is very simple for now, it checks the file name ends with a format like `.$FT.tmpl`, then sets it as
 [`@injection.language = $FT`][1] for treesitter.
 
+## Requirements
+
+- Neovim >= 0.10
+- The `gotmpl` parser installed via `nvim-treesitter` (`:TSInstall gotmpl`), plus a parser for
+  whatever host language you're injecting (`:TSInstall yaml html json ...`)
+
 ## Installation
 
 ```lua
@@ -26,6 +32,11 @@ manually set it:
 ```vim
 :set filetype=gotmpl
 ```
+
+## Contributing
+
+There's a small smoke test covering the extension/filetype detection logic in `tests/smoke.lua` —
+run it with `nvim --headless -u NONE -l tests/smoke.lua` after making changes to `lua/gotmpl/init.lua`.
 
 ### References
 

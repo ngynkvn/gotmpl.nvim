@@ -1,0 +1,3 @@
+indent_type = "Tabs"
+column_width = 100
+quote_style = "AutoPreferDouble"
